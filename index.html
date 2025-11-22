@@ -587,72 +587,7 @@
       color: var(--muted);
       line-height: 1.5;
     }
-        .download-actions {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      margin-top: 6px;
-    }
-
-    .btn-download {
-      border: none;
-      border-radius: 999px;
-      padding: 6px 12px;
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      background: var(--btn-bg);
-      color: var(--btn-text);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      text-decoration: none;
-    }
-
-    .btn-download:hover {
-      background: var(--btn-bg-hover);
-    }
-
-    .btn-download-secondary {
-      background: #ffffff;
-      color: var(--accent);
-      border: 1px solid var(--border);
-    }
-
-    .btn-download-secondary:hover {
-      background: #f3f4f6;
-    }
-        @media print {
-      @page {
-        margin: 10mm;
-      }
-
-      body {
-        background: #ffffff;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-
-      .page {
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-        box-shadow: none;
-      }
-
-      .hero-card,
-      .card {
-        box-shadow: none;
-        border: 1px solid #dddddd;
-      }
-
-      .download-actions {
-        display: none;
-      }
-    }
+    
   </style>
 </head>
 <body>
