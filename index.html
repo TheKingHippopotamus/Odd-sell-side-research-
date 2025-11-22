@@ -587,6 +587,44 @@
       color: var(--muted);
       line-height: 1.5;
     }
+        .download-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin-top: 6px;
+    }
+
+    .btn-download {
+      border: none;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .btn-download:hover {
+      background: var(--btn-bg-hover);
+    }
+
+    .btn-download-secondary {
+      background: #ffffff;
+      color: var(--accent);
+      border: 1px solid var(--border);
+    }
+
+    .btn-download-secondary:hover {
+      background: #f3f4f6;
+    }
   </style>
 </head>
 <body>
@@ -601,13 +639,25 @@
           <div class="brand-subtitle">Oddity Tech Ltd. (NASDAQ: ODD) Sell Side Research</div>
         </div>
       </div>
-      <div class="header-meta">
+            <div class="header-meta">
         <div class="tag-row">
           <span class="pill">Equity Research</span>
           <span class="pill pill-muted">Consumer Tech · Beauty &amp; Wellness</span>
         </div>
         <div>Report date: 22 November 2025</div>
         <div>Analyst: Nir (HippoResearch)</div>
+
+        <div class="download-actions">
+          <!-- כפתור שיוצר PDF דרך הדפדפן (Print → Save as PDF) -->
+          <button class="btn-download" onclick="window.print()">
+            Download as PDF
+          </button>
+
+          <!-- אופציונלי: לינק לקובץ PDF סטטי אם תעלה אחד לריפו -->
+          <a href="ODD_report.pdf" class="btn-download btn-download-secondary" download>
+            Static PDF
+          </a>
+        </div>
       </div>
     </header>
 
