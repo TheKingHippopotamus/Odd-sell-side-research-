@@ -625,6 +625,34 @@
     .btn-download-secondary:hover {
       background: #f3f4f6;
     }
+        @media print {
+      @page {
+        margin: 10mm;
+      }
+
+      body {
+        background: #ffffff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      .hero-card,
+      .card {
+        box-shadow: none;
+        border: 1px solid #dddddd;
+      }
+
+      .download-actions {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -647,8 +675,7 @@
         <div>Report date: 22 November 2025</div>
         <div>Analyst: Nir (HippoResearch)</div>
 
-        <div class="download-actions">
-          <!-- כפתור שיוצר PDF דרך הדפדפן (Print → Save as PDF) -->
+        <     <div class="download-actions">
           <button class="btn-download" onclick="window.print()">
             Download as PDF
           </button>
